@@ -1,0 +1,7 @@
+{
+    "WINBOND": {
+        "W25Q": [
+            ["XT25BF128F", "0x000B4018", "0x8000000", ["3000", "700", "2000", "150", "200000", "40000", "false"], ["SPI X1, 24-bit address", "SPI X2, 24-bit address", "SPI X4, 24-bit address"], true]
+        ]
+    }
+}

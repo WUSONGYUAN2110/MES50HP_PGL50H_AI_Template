@@ -1,0 +1,10 @@
+* text=auto
+*.tcl text eol=lf
+*.v text eol=lf
+*.sv text eol=lf
+*.fdc text eol=lf
+*.do text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.sbit filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,287 @@
+group,port,pin,direction,vccio,standard,drive,clock_period,mode,description,manual_table
+clock_50m,clk_50m,P20,Input,3.3,LVCMOS33,,20,gpio,50MHz system clock,Table 2-3
+clock_27m,clk_27m,K21,Input,3.3,LVCMOS33,,37.037,gpio,27MHz system clock,Table 2-3
+keys,user_key[0],K18,Input,3.3,LVCMOS33,,,gpio,KEY1 active low,Table 2-26
+keys,user_key[1],L15,Input,3.3,LVCMOS33,,,gpio,KEY2 active low,Table 2-26
+keys,user_key[2],J17,Input,3.3,LVCMOS33,,,gpio,KEY3 active low,Table 2-26
+keys,user_key[3],K16,Input,3.3,LVCMOS33,,,gpio,KEY4 active low,Table 2-26
+keys,user_key[4],J16,Input,3.3,LVCMOS33,,,gpio,KEY5 active low,Table 2-26
+keys,user_key[5],J19,Input,3.3,LVCMOS33,,,gpio,KEY6 active low,Table 2-26
+keys,user_key[6],H20,Input,3.3,LVCMOS33,,,gpio,KEY7 active low,Table 2-26
+keys,user_key[7],H17,Input,3.3,LVCMOS33,,,gpio,KEY8 active low,Table 2-26
+leds,user_led[0],B2,Output,3.3,LVCMOS33,8,,gpio,LED1 active high,Table 2-27
+leds,user_led[1],A2,Output,3.3,LVCMOS33,8,,gpio,LED2 active high,Table 2-27
+leds,user_led[2],B3,Output,3.3,LVCMOS33,8,,gpio,LED3 active high,Table 2-27
+leds,user_led[3],A3,Output,3.3,LVCMOS33,8,,gpio,LED4 active high,Table 2-27
+leds,user_led[4],C5,Output,3.3,LVCMOS33,8,,gpio,LED5 active high,Table 2-27
+leds,user_led[5],A5,Output,3.3,LVCMOS33,8,,gpio,LED6 active high,Table 2-27
+leds,user_led[6],F7,Output,3.3,LVCMOS33,8,,gpio,LED7 active high,Table 2-27
+leds,user_led[7],F8,Output,3.3,LVCMOS33,8,,gpio,LED8 active high,Table 2-27
+uart0,uart0_tx,R9,Output,3.3,LVCMOS33,8,,gpio,USB UART transmit,Table 2-18
+uart0,uart0_rx,R8,Input,3.3,LVCMOS33,,,gpio,USB UART receive,Table 2-18
+eeprom,eeprom_scl,F15,Output,3.3,LVCMOS33,8,,gpio,24LC02 I2C clock,Table 2-28
+eeprom,eeprom_sda,G8,Inout,3.3,LVCMOS33,,,gpio,24LC02 I2C data,Table 2-28
+sdcard,sd_clk,C4,Output,3.3,LVCMOS33,8,,gpio,MicroSD clock,Table 2-23
+sdcard,sd_cmd,A4,Inout,3.3,LVCMOS33,,,gpio,MicroSD command,Table 2-23
+sdcard,sd_data[0],D5,Inout,3.3,LVCMOS33,,,gpio,MicroSD data0,Table 2-23
+sdcard,sd_data[1],D4,Inout,3.3,LVCMOS33,,,gpio,MicroSD data1,Table 2-23
+sdcard,sd_data[2],E6,Inout,3.3,LVCMOS33,,,gpio,MicroSD data2,Table 2-23
+sdcard,sd_data[3],E5,Inout,3.3,LVCMOS33,,,gpio,MicroSD data3,Table 2-23
+sdcard,sd_detect,G9,Input,3.3,LVCMOS33,,,gpio,MicroSD card detect,Table 2-23
+ethernet0,eth0_rx_clk,F14,Input,3.3,LVCMOS33,,,gpio,RGMII0 receive clock,Table 2-9
+ethernet0,eth0_rx_ctrl,F9,Input,3.3,LVCMOS33,,,gpio,RGMII0 receive control,Table 2-9
+ethernet0,eth0_rxd[3],H13,Input,3.3,LVCMOS33,,,gpio,RGMII0 receive data3,Table 2-9
+ethernet0,eth0_rxd[2],G13,Input,3.3,LVCMOS33,,,gpio,RGMII0 receive data2,Table 2-9
+ethernet0,eth0_rxd[1],H11,Input,3.3,LVCMOS33,,,gpio,RGMII0 receive data1,Table 2-9
+ethernet0,eth0_rxd[0],H10,Input,3.3,LVCMOS33,,,gpio,RGMII0 receive data0,Table 2-9
+ethernet0,eth0_tx_clk,G16,Output,3.3,LVCMOS33,8,,gpio,RGMII0 transmit clock,Table 2-9
+ethernet0,eth0_tx_ctrl,B18,Output,3.3,LVCMOS33,8,,gpio,RGMII0 transmit control,Table 2-9
+ethernet0,eth0_txd[3],A18,Output,3.3,LVCMOS33,8,,gpio,RGMII0 transmit data3,Table 2-9
+ethernet0,eth0_txd[2],C18,Output,3.3,LVCMOS33,8,,gpio,RGMII0 transmit data2,Table 2-9
+ethernet0,eth0_txd[1],D17,Output,3.3,LVCMOS33,8,,gpio,RGMII0 transmit data1,Table 2-9
+ethernet0,eth0_txd[0],F17,Output,3.3,LVCMOS33,8,,gpio,RGMII0 transmit data0,Table 2-9
+ethernet0,eth0_mdc,A20,Output,3.3,LVCMOS33,8,,gpio,RGMII0 management clock,Table 2-9
+ethernet0,eth0_mdio,C19,Inout,3.3,LVCMOS33,,,gpio,RGMII0 management data,Table 2-9
+ethernet0,eth0_reset_n,B20,Output,3.3,LVCMOS33,8,,gpio,RGMII0 PHY reset active low,Table 2-9
+ethernet1,eth1_rx_clk,M19,Input,3.3,LVCMOS33,,,gpio,RGMII1 receive clock,Table 2-10
+ethernet1,eth1_rx_ctrl,B21,Input,3.3,LVCMOS33,,,gpio,RGMII1 receive control,Table 2-10
+ethernet1,eth1_rxd[3],F18,Input,3.3,LVCMOS33,,,gpio,RGMII1 receive data3,Table 2-10
+ethernet1,eth1_rxd[2],D22,Input,3.3,LVCMOS33,,,gpio,RGMII1 receive data2,Table 2-10
+ethernet1,eth1_rxd[1],D21,Input,3.3,LVCMOS33,,,gpio,RGMII1 receive data1,Table 2-10
+ethernet1,eth1_rxd[0],B22,Input,3.3,LVCMOS33,,,gpio,RGMII1 receive data0,Table 2-10
+ethernet1,eth1_tx_clk,C20,Output,3.3,LVCMOS33,8,,gpio,RGMII1 transmit clock,Table 2-10
+ethernet1,eth1_tx_ctrl,F22,Output,3.3,LVCMOS33,8,,gpio,RGMII1 transmit control,Table 2-10
+ethernet1,eth1_txd[3],F21,Output,3.3,LVCMOS33,8,,gpio,RGMII1 transmit data3,Table 2-10
+ethernet1,eth1_txd[2],E22,Output,3.3,LVCMOS33,8,,gpio,RGMII1 transmit data2,Table 2-10
+ethernet1,eth1_txd[1],E20,Output,3.3,LVCMOS33,8,,gpio,RGMII1 transmit data1,Table 2-10
+ethernet1,eth1_txd[0],C22,Output,3.3,LVCMOS33,8,,gpio,RGMII1 transmit data0,Table 2-10
+ethernet1,eth1_mdc,G20,Output,3.3,LVCMOS33,8,,gpio,RGMII1 management clock,Table 2-10
+ethernet1,eth1_mdio,G22,Inout,3.3,LVCMOS33,,,gpio,RGMII1 management data,Table 2-10
+ethernet1,eth1_reset_n,F19,Output,3.3,LVCMOS33,8,,gpio,RGMII1 PHY reset active low,Table 2-10
+sfp0_ctrl,sfp0_los,E16,Input,3.3,LVCMOS33,,,gpio,SFP0 loss of signal,Table 2-13
+sfp0_ctrl,sfp0_scl,G15,Output,3.3,LVCMOS33,8,,gpio,SFP0 I2C clock,Table 2-13
+sfp0_ctrl,sfp0_sda,H14,Inout,3.3,LVCMOS33,,,gpio,SFP0 I2C data,Table 2-13
+sfp0_ctrl,sfp0_tx_disable,H12,Output,3.3,LVCMOS33,8,,gpio,SFP0 transmitter disable,Table 2-13
+sfp1_ctrl,sfp1_los,D18,Input,3.3,LVCMOS33,,,gpio,SFP1 loss of signal,Table 2-13
+sfp1_ctrl,sfp1_scl,C17,Output,3.3,LVCMOS33,8,,gpio,SFP1 I2C clock,Table 2-13
+sfp1_ctrl,sfp1_sda,A17,Inout,3.3,LVCMOS33,,,gpio,SFP1 I2C data,Table 2-13
+sfp1_ctrl,sfp1_tx_disable,F16,Output,3.3,LVCMOS33,8,,gpio,SFP1 transmitter disable,Table 2-13
+sfp_hsst,sfp0_tx_p,B14,Output,,,,,ip,SFP0 HSST transmit positive,Table 2-13
+sfp_hsst,sfp0_tx_n,A14,Output,,,,,ip,SFP0 HSST transmit negative,Table 2-13
+sfp_hsst,sfp0_rx_p,D13,Input,,,,,ip,SFP0 HSST receive positive,Table 2-13
+sfp_hsst,sfp0_rx_n,C13,Input,,,,,ip,SFP0 HSST receive negative,Table 2-13
+sfp_hsst,sfp1_tx_p,B16,Output,,,,,ip,SFP1 HSST transmit positive,Table 2-13
+sfp_hsst,sfp1_tx_n,A16,Output,,,,,ip,SFP1 HSST transmit negative,Table 2-13
+sfp_hsst,sfp1_rx_p,D15,Input,,,,,ip,SFP1 HSST receive positive,Table 2-13
+sfp_hsst,sfp1_rx_n,C15,Input,,,,,ip,SFP1 HSST receive negative,Table 2-13
+pcie_ctrl,pcie_perst_n,A19,Input,3.3,LVCMOS33,,,gpio,PCIe reset active low,Table 2-15
+pcie_ctrl,pcie_wake_n,D19,Output,3.3,LVCMOS33,8,,gpio,PCIe wake active low,Table 2-15
+pcie_hsst,pcie_tx0_p,B6,Output,,,,,ip,PCIe lane0 transmit positive,Table 2-15
+pcie_hsst,pcie_tx0_n,A6,Output,,,,,ip,PCIe lane0 transmit negative,Table 2-15
+pcie_hsst,pcie_tx1_p,B8,Output,,,,,ip,PCIe lane1 transmit positive,Table 2-15
+pcie_hsst,pcie_tx1_n,A8,Output,,,,,ip,PCIe lane1 transmit negative,Table 2-15
+pcie_hsst,pcie_rx0_p,D7,Input,,,,,ip,PCIe lane0 receive positive,Table 2-15
+pcie_hsst,pcie_rx0_n,C7,Input,,,,,ip,PCIe lane0 receive negative,Table 2-15
+pcie_hsst,pcie_rx1_p,D9,Input,,,,,ip,PCIe lane1 receive positive,Table 2-15
+pcie_hsst,pcie_rx1_n,C9,Input,,,,,ip,PCIe lane1 receive negative,Table 2-15
+pcie_hsst,pcie_refclk_p,A12,Input,,,,,ip,PCIe reference clock positive,Table 2-15
+pcie_hsst,pcie_refclk_n,B12,Input,,,,,ip,PCIe reference clock negative,Table 2-15
+hsst_ref,hsst_refclk_p,A10,Input,,,,8,ip,HSST 125MHz reference positive,Table 2-3
+hsst_ref,hsst_refclk_n,B10,Input,,,,8,ip,HSST 125MHz reference negative,Table 2-3
+hdmi_rx,hdmi_rx_pclk,AA12,Input,3.3,LVCMOS33,,,gpio,HDMI receiver pixel clock,Table 2-20
+hdmi_rx,hdmi_rx_vs,W13,Input,3.3,LVCMOS33,,,gpio,HDMI receiver vertical sync,Table 2-20
+hdmi_rx,hdmi_rx_hs,V13,Input,3.3,LVCMOS33,,,gpio,HDMI receiver horizontal sync,Table 2-20
+hdmi_rx,hdmi_rx_de,U13,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data enable,Table 2-20
+hdmi_rx,hdmi_rx_d[0],U14,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data0,Table 2-20
+hdmi_rx,hdmi_rx_d[1],U15,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data1,Table 2-20
+hdmi_rx,hdmi_rx_d[2],T15,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data2,Table 2-20
+hdmi_rx,hdmi_rx_d[3],W15,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data3,Table 2-20
+hdmi_rx,hdmi_rx_d[4],Y16,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data4,Table 2-20
+hdmi_rx,hdmi_rx_d[5],AB16,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data5,Table 2-20
+hdmi_rx,hdmi_rx_d[6],AA16,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data6,Table 2-20
+hdmi_rx,hdmi_rx_d[7],AB17,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data7,Table 2-20
+hdmi_rx,hdmi_rx_d[8],Y17,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data8,Table 2-20
+hdmi_rx,hdmi_rx_d[9],V17,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data9,Table 2-20
+hdmi_rx,hdmi_rx_d[10],W18,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data10,Table 2-20
+hdmi_rx,hdmi_rx_d[11],AB19,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data11,Table 2-20
+hdmi_rx,hdmi_rx_d[12],AA18,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data12,Table 2-20
+hdmi_rx,hdmi_rx_d[13],AB18,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data13,Table 2-20
+hdmi_rx,hdmi_rx_d[14],Y18,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data14,Table 2-20
+hdmi_rx,hdmi_rx_d[15],W17,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data15,Table 2-20
+hdmi_rx,hdmi_rx_d[16],Y15,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data16,Table 2-20
+hdmi_rx,hdmi_rx_d[17],AB15,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data17,Table 2-20
+hdmi_rx,hdmi_rx_d[18],U16,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data18,Table 2-20
+hdmi_rx,hdmi_rx_d[19],V15,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data19,Table 2-20
+hdmi_rx,hdmi_rx_d[20],AA14,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data20,Table 2-20
+hdmi_rx,hdmi_rx_d[21],AB14,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data21,Table 2-20
+hdmi_rx,hdmi_rx_d[22],W14,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data22,Table 2-20
+hdmi_rx,hdmi_rx_d[23],Y14,Input,3.3,LVCMOS33,,,gpio,HDMI receiver data23,Table 2-20
+hdmi_rx,hdmi_rx_scl,V19,Output,3.3,LVCMOS33,8,,gpio,MS7200 I2C clock,Table 2-20
+hdmi_rx,hdmi_rx_sda,V20,Inout,3.3,LVCMOS33,,,gpio,MS7200 I2C data,Table 2-20
+hdmi_rx,hdmi_rx_sc_mc,T18,Input,3.3,LVCMOS33,,,gpio,MS7200 audio clock,Table 2-20
+hdmi_rx,hdmi_rx_mu_mc,W22,Input,3.3,LVCMOS33,,,gpio,MS7200 audio master clock,Table 2-20
+hdmi_rx,hdmi_rx_i2s1,R16,Input,3.3,LVCMOS33,,,gpio,MS7200 I2S data1,Table 2-20
+hdmi_rx,hdmi_rx_i2s0,R15,Input,3.3,LVCMOS33,,,gpio,MS7200 I2S data0,Table 2-20
+hdmi_rx,hdmi_rx_ws_sp,T19,Input,3.3,LVCMOS33,,,gpio,MS7200 audio word select,Table 2-20
+hdmi_rx,hdmi_rx_reset_n,R17,Output,3.3,LVCMOS33,8,,gpio,MS7200 reset active low,Table 2-20
+hdmi_rx,hdmi_rx_int,T17,Input,3.3,LVCMOS33,,,gpio,MS7200 interrupt,Table 2-20
+hdmi_tx,hdmi_tx_pclk,M22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter pixel clock,Table 2-21
+hdmi_tx,hdmi_tx_vs,W20,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter vertical sync,Table 2-21
+hdmi_tx,hdmi_tx_hs,Y21,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter horizontal sync,Table 2-21
+hdmi_tx,hdmi_tx_de,Y22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data enable,Table 2-21
+hdmi_tx,hdmi_tx_d[0],V21,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data0,Table 2-21
+hdmi_tx,hdmi_tx_d[1],V22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data1,Table 2-21
+hdmi_tx,hdmi_tx_d[2],T21,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data2,Table 2-21
+hdmi_tx,hdmi_tx_d[3],T22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data3,Table 2-21
+hdmi_tx,hdmi_tx_d[4],R20,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data4,Table 2-21
+hdmi_tx,hdmi_tx_d[5],R22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data5,Table 2-21
+hdmi_tx,hdmi_tx_d[6],R19,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data6,Table 2-21
+hdmi_tx,hdmi_tx_d[7],P19,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data7,Table 2-21
+hdmi_tx,hdmi_tx_d[8],M21,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data8,Table 2-21
+hdmi_tx,hdmi_tx_d[9],M17,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data9,Table 2-21
+hdmi_tx,hdmi_tx_d[10],M18,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data10,Table 2-21
+hdmi_tx,hdmi_tx_d[11],M16,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data11,Table 2-21
+hdmi_tx,hdmi_tx_d[12],N15,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data12,Table 2-21
+hdmi_tx,hdmi_tx_d[13],L19,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data13,Table 2-21
+hdmi_tx,hdmi_tx_d[14],K20,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data14,Table 2-21
+hdmi_tx,hdmi_tx_d[15],L17,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data15,Table 2-21
+hdmi_tx,hdmi_tx_d[16],K17,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data16,Table 2-21
+hdmi_tx,hdmi_tx_d[17],N19,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data17,Table 2-21
+hdmi_tx,hdmi_tx_d[18],J22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data18,Table 2-21
+hdmi_tx,hdmi_tx_d[19],J20,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data19,Table 2-21
+hdmi_tx,hdmi_tx_d[20],K22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data20,Table 2-21
+hdmi_tx,hdmi_tx_d[21],H21,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data21,Table 2-21
+hdmi_tx,hdmi_tx_d[22],H22,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data22,Table 2-21
+hdmi_tx,hdmi_tx_d[23],H19,Output,3.3,LVCMOS33,8,,gpio,HDMI transmitter data23,Table 2-21
+hdmi_tx,hdmi_tx_scl,P17,Output,3.3,LVCMOS33,8,,gpio,MS7210 I2C clock,Table 2-21
+hdmi_tx,hdmi_tx_sda,P18,Inout,3.3,LVCMOS33,,,gpio,MS7210 I2C data,Table 2-21
+hdmi_tx,hdmi_tx_sc_mc,W22,Output,3.3,LVCMOS33,8,,gpio,MS7210 audio master clock,Table 2-21
+hdmi_tx,hdmi_tx_i2s1,P21,Output,3.3,LVCMOS33,8,,gpio,MS7210 I2S data1,Table 2-21
+hdmi_tx,hdmi_tx_i2s0,U22,Output,3.3,LVCMOS33,8,,gpio,MS7210 I2S data0,Table 2-21
+hdmi_tx,hdmi_tx_ws,U19,Output,3.3,LVCMOS33,8,,gpio,MS7210 audio word select,Table 2-21
+hdmi_tx,hdmi_tx_reset_n,R17,Output,3.3,LVCMOS33,8,,gpio,MS7210 reset active low,Table 2-21
+hdmi_tx,hdmi_tx_int,U20,Input,3.3,LVCMOS33,,,gpio,MS7210 interrupt,Table 2-21
+expansion40,ex_io_11_n,AB13,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_11N,Table 2-24
+expansion40,ex_io_11_p,Y13,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_11P,Table 2-24
+expansion40,ex_io_9_n,AB11,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_9N,Table 2-24
+expansion40,ex_io_9_p,Y11,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_9P,Table 2-24
+expansion40,ex_io_10_n,W11,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_10N,Table 2-24
+expansion40,ex_io_10_p,V11,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_10P,Table 2-24
+expansion40,ex_io_12_n,AB10,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_12N,Table 2-24
+expansion40,ex_io_12_p,AA10,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_12P,Table 2-24
+expansion40,ex_io_15_n,Y10,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_15N,Table 2-24
+expansion40,ex_io_15_p,W10,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_15P,Table 2-24
+expansion40,ex_io_16_n,T11,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_16N,Table 2-24
+expansion40,ex_io_16_p,R11,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_16P,Table 2-24
+expansion40,ex_io_7_n,Y12,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_7N,Table 2-24
+expansion40,ex_io_7_p,W12,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_7P,Table 2-24
+expansion40,ex_io_8_n,U12,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_8N,Table 2-24
+expansion40,ex_io_8_p,T12,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_8P,Table 2-24
+expansion40,ex_io_14_n,U10,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_14N,Table 2-24
+expansion40,ex_io_14_p,T10,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_14P,Table 2-24
+expansion40,ex_io_13_n,AB9,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_13N,Table 2-24
+expansion40,ex_io_13_p,Y9,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_13P,Table 2-24
+expansion40,ex_io_17_n,V9,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_17N,Table 2-24
+expansion40,ex_io_17_p,U9,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_17P,Table 2-24
+expansion40,ex_io_3_n,U8,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_3N,Table 2-24
+expansion40,ex_io_3_p,T8,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_3P,Table 2-24
+expansion40,ex_io_4_n,W8,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_4N,Table 2-24
+expansion40,ex_io_4_p,V7,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_4P,Table 2-24
+expansion40,ex_io_6_n,AB8,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_6N,Table 2-24
+expansion40,ex_io_6_p,AA8,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_6P,Table 2-24
+expansion40,ex_io_5_n,Y6,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_5N,Table 2-24
+expansion40,ex_io_5_p,W6,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_5P,Table 2-24
+expansion40,ex_io_2_n,AB5,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_2N,Table 2-24
+expansion40,ex_io_2_p,Y5,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_2P,Table 2-24
+expansion40,ex_io_1_n,AB4,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_1N,Table 2-24
+expansion40,ex_io_1_p,AA4,Inout,3.3,LVCMOS33,,,gpio,40Pin EX_IO_1P,Table 2-24
+pmod,pmod_d1_n,AB6,Inout,3.3,LVCMOS33,,,gpio,PMOD D1N,Table 2-25
+pmod,pmod_d1_p,AA6,Inout,3.3,LVCMOS33,,,gpio,PMOD D1P,Table 2-25
+pmod,pmod_d2_n,AB7,Inout,3.3,LVCMOS33,,,gpio,PMOD D2N,Table 2-25
+pmod,pmod_d2_p,Y7,Inout,3.3,LVCMOS33,,,gpio,PMOD D2P,Table 2-25
+pmod,pmod_d3_n,Y8,Inout,3.3,LVCMOS33,,,gpio,PMOD D3N,Table 2-25
+pmod,pmod_d3_p,W9,Inout,3.3,LVCMOS33,,,gpio,PMOD D3P,Table 2-25
+pmod,pmod_d4_n,U6,Inout,3.3,LVCMOS33,,,gpio,PMOD D4N,Table 2-25
+pmod,pmod_d4_p,T7,Inout,3.3,LVCMOS33,,,gpio,PMOD D4P,Table 2-25
+qspi_config,qspi_cs_n,AA3,Output,,,,,config,FPGA configuration flash chip select,Table 2-7
+qspi_config,qspi_dq0,AB20,Inout,,,,,config,FPGA configuration flash data0,Table 2-7
+qspi_config,qspi_dq1,AA20,Inout,,,,,config,FPGA configuration flash data1,Table 2-7
+qspi_config,qspi_dq2,R13,Inout,,,,,config,FPGA configuration flash data2,Table 2-7
+qspi_config,qspi_dq3,T14,Inout,,,,,config,FPGA configuration flash data3,Table 2-7
+qspi_config,qspi_sck,Y20,Output,,,,,config,FPGA configuration flash clock,Table 2-7
+jtag_config,jtag_tdi,E18,Input,,,,,config,JTAG data input,Table 2-30
+jtag_config,jtag_tck,A21,Input,,,,,config,JTAG clock,Table 2-30
+jtag_config,jtag_tms,D20,Input,,,,,config,JTAG mode select,Table 2-30
+jtag_config,jtag_tdo,G17,Output,,,,,config,JTAG data output,Table 2-30
+ddr3_ip,ddr3_addr[0],N6,Output,1.5,SSTL15,,,ip,DDR3 address0,Table 2-5
+ddr3_ip,ddr3_addr[1],R4,Output,1.5,SSTL15,,,ip,DDR3 address1,Table 2-5
+ddr3_ip,ddr3_addr[2],P6,Output,1.5,SSTL15,,,ip,DDR3 address2,Table 2-5
+ddr3_ip,ddr3_addr[3],F3,Output,1.5,SSTL15,,,ip,DDR3 address3,Table 2-5
+ddr3_ip,ddr3_addr[4],V5,Output,1.5,SSTL15,,,ip,DDR3 address4,Table 2-5
+ddr3_ip,ddr3_addr[5],E4,Output,1.5,SSTL15,,,ip,DDR3 address5,Table 2-5
+ddr3_ip,ddr3_addr[6],V3,Output,1.5,SSTL15,,,ip,DDR3 address6,Table 2-5
+ddr3_ip,ddr3_addr[7],D2,Output,1.5,SSTL15,,,ip,DDR3 address7,Table 2-5
+ddr3_ip,ddr3_addr[8],U4,Output,1.5,SSTL15,,,ip,DDR3 address8,Table 2-5
+ddr3_ip,ddr3_addr[9],P5,Output,1.5,SSTL15,,,ip,DDR3 address9,Table 2-5
+ddr3_ip,ddr3_addr[10],P8,Output,1.5,SSTL15,,,ip,DDR3 address10,Table 2-5
+ddr3_ip,ddr3_addr[11],T4,Output,1.5,SSTL15,,,ip,DDR3 address11,Table 2-5
+ddr3_ip,ddr3_addr[12],P7,Output,1.5,SSTL15,,,ip,DDR3 address12,Table 2-5
+ddr3_ip,ddr3_addr[13],P4,Output,1.5,SSTL15,,,ip,DDR3 address13,Table 2-5
+ddr3_ip,ddr3_addr[14],T3,Output,1.5,SSTL15,,,ip,DDR3 address14,Table 2-5
+ddr3_ip,ddr3_addr[15],R7,Output,1.5,SSTL15,,,ip,DDR3 address15,Table 2-5
+ddr3_ip,ddr3_ba[0],F5,Output,1.5,SSTL15,,,ip,DDR3 bank address0,Table 2-5
+ddr3_ip,ddr3_ba[1],W4,Output,1.5,SSTL15,,,ip,DDR3 bank address1,Table 2-5
+ddr3_ip,ddr3_ba[2],N7,Output,1.5,SSTL15,,,ip,DDR3 bank address2,Table 2-5
+ddr3_ip,ddr3_cas_n,H8,Output,1.5,SSTL15,,,ip,DDR3 CAS,Table 2-5
+ddr3_ip,ddr3_ck_n,T5,Output,1.5,DIFF_SSTL15,,,ip,DDR3 clock negative,Table 2-5
+ddr3_ip,ddr3_ck_p,T6,Output,1.5,DIFF_SSTL15,,,ip,DDR3 clock positive,Table 2-5
+ddr3_ip,ddr3_cke,Y3,Output,1.5,SSTL15,,,ip,DDR3 clock enable,Table 2-5
+ddr3_ip,ddr3_cs_n,G6,Output,1.5,SSTL15,,,ip,DDR3 chip select,Table 2-5
+ddr3_ip,ddr3_odt,G7,Output,1.5,SSTL15,,,ip,DDR3 ODT,Table 2-5
+ddr3_ip,ddr3_ras_n,J7,Output,1.5,SSTL15,,,ip,DDR3 RAS,Table 2-5
+ddr3_ip,ddr3_reset_n,C1,Output,1.5,SSTL15,,,ip,DDR3 reset,Table 2-5
+ddr3_ip,ddr3_we_n,H6,Output,1.5,SSTL15,,,ip,DDR3 WE,Table 2-5
+ddr3_ip,ddr3_dm[0],W3,Output,1.5,SSTL15,,,ip,DDR3 data mask0,Table 2-5
+ddr3_ip,ddr3_dm[1],L1,Output,1.5,SSTL15,,,ip,DDR3 data mask1,Table 2-5
+ddr3_ip,ddr3_dm[2],K2,Output,1.5,SSTL15,,,ip,DDR3 data mask2,Table 2-5
+ddr3_ip,ddr3_dm[3],G1,Output,1.5,SSTL15,,,ip,DDR3 data mask3,Table 2-5
+ddr3_ip,ddr3_dq[0],U1,Inout,1.5,SSTL15,,,ip,DDR3 data0,Table 2-5
+ddr3_ip,ddr3_dq[1],U3,Inout,1.5,SSTL15,,,ip,DDR3 data1,Table 2-5
+ddr3_ip,ddr3_dq[2],T2,Inout,1.5,SSTL15,,,ip,DDR3 data2,Table 2-5
+ddr3_ip,ddr3_dq[3],Y2,Inout,1.5,SSTL15,,,ip,DDR3 data3,Table 2-5
+ddr3_ip,ddr3_dq[4],T1,Inout,1.5,SSTL15,,,ip,DDR3 data4,Table 2-5
+ddr3_ip,ddr3_dq[5],Y1,Inout,1.5,SSTL15,,,ip,DDR3 data5,Table 2-5
+ddr3_ip,ddr3_dq[6],M7,Inout,1.5,SSTL15,,,ip,DDR3 data6,Table 2-5
+ddr3_ip,ddr3_dq[7],W1,Inout,1.5,SSTL15,,,ip,DDR3 data7,Table 2-5
+ddr3_ip,ddr3_dq[8],P1,Inout,1.5,SSTL15,,,ip,DDR3 data8,Table 2-5
+ddr3_ip,ddr3_dq[9],M2,Inout,1.5,SSTL15,,,ip,DDR3 data9,Table 2-5
+ddr3_ip,ddr3_dq[10],R1,Inout,1.5,SSTL15,,,ip,DDR3 data10,Table 2-5
+ddr3_ip,ddr3_dq[11],M1,Inout,1.5,SSTL15,,,ip,DDR3 data11,Table 2-5
+ddr3_ip,ddr3_dq[12],P2,Inout,1.5,SSTL15,,,ip,DDR3 data12,Table 2-5
+ddr3_ip,ddr3_dq[13],L3,Inout,1.5,SSTL15,,,ip,DDR3 data13,Table 2-5
+ddr3_ip,ddr3_dq[14],P3,Inout,1.5,SSTL15,,,ip,DDR3 data14,Table 2-5
+ddr3_ip,ddr3_dq[15],N4,Inout,1.5,SSTL15,,,ip,DDR3 data15,Table 2-5
+ddr3_ip,ddr3_dq[16],K4,Inout,1.5,SSTL15,,,ip,DDR3 data16,Table 2-5
+ddr3_ip,ddr3_dq[17],K1,Inout,1.5,SSTL15,,,ip,DDR3 data17,Table 2-5
+ddr3_ip,ddr3_dq[18],J3,Inout,1.5,SSTL15,,,ip,DDR3 data18,Table 2-5
+ddr3_ip,ddr3_dq[19],L4,Inout,1.5,SSTL15,,,ip,DDR3 data19,Table 2-5
+ddr3_ip,ddr3_dq[20],K3,Inout,1.5,SSTL15,,,ip,DDR3 data20,Table 2-5
+ddr3_ip,ddr3_dq[21],M3,Inout,1.5,SSTL15,,,ip,DDR3 data21,Table 2-5
+ddr3_ip,ddr3_dq[22],J1,Inout,1.5,SSTL15,,,ip,DDR3 data22,Table 2-5
+ddr3_ip,ddr3_dq[23],M4,Inout,1.5,SSTL15,,,ip,DDR3 data23,Table 2-5
+ddr3_ip,ddr3_dq[24],J6,Inout,1.5,SSTL15,,,ip,DDR3 data24,Table 2-5
+ddr3_ip,ddr3_dq[25],F1,Inout,1.5,SSTL15,,,ip,DDR3 data25,Table 2-5
+ddr3_ip,ddr3_dq[26],K7,Inout,1.5,SSTL15,,,ip,DDR3 data26,Table 2-5
+ddr3_ip,ddr3_dq[27],F2,Inout,1.5,SSTL15,,,ip,DDR3 data27,Table 2-5
+ddr3_ip,ddr3_dq[28],H5,Inout,1.5,SSTL15,,,ip,DDR3 data28,Table 2-5
+ddr3_ip,ddr3_dq[29],H3,Inout,1.5,SSTL15,,,ip,DDR3 data29,Table 2-5
+ddr3_ip,ddr3_dq[30],J4,Inout,1.5,SSTL15,,,ip,DDR3 data30,Table 2-5
+ddr3_ip,ddr3_dq[31],G3,Inout,1.5,SSTL15,,,ip,DDR3 data31,Table 2-5
+ddr3_ip,ddr3_dqs_p[0],V2,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe0 positive,Table 2-5
+ddr3_ip,ddr3_dqs_n[0],V1,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe0 negative,Table 2-5
+ddr3_ip,ddr3_dqs_p[1],N3,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe1 positive,Table 2-5
+ddr3_ip,ddr3_dqs_n[1],N1,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe1 negative,Table 2-5
+ddr3_ip,ddr3_dqs_p[2],M6,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe2 positive,Table 2-5
+ddr3_ip,ddr3_dqs_n[2],L6,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe2 negative,Table 2-5
+ddr3_ip,ddr3_dqs_p[3],E3,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe3 positive,Table 2-5
+ddr3_ip,ddr3_dqs_n[3],E1,Inout,1.5,DIFF_SSTL15,,,ip,DDR3 strobe3 negative,Table 2-5
