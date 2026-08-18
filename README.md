@@ -1,78 +1,80 @@
-# MES50HP / PGL50H FPGA 模板
+# MES50HP / PGL50H FPGA Template
 
-> 面向 MES50HP / PGL50H 的可复现 Pango FPGA 开发模板，支持 AI 辅助下从 RTL、仿真、综合、时序到位流和 JTAG/Flash 的脚本化全流程。
+English | [中文](README.zh-CN.md)
 
-## 项目定位
+> A reproducible Pango FPGA development template for MES50HP / PGL50H, with scriptable AI-assisted workflows from RTL, simulation, synthesis, timing analysis, and bitstream generation to JTAG/Flash programming.
 
-本模板固定面向 MES50HP 开发板，适用于从空白工程开始迭代 FPGA 设计。项目把器件、顶层、源文件顺序、管脚组、仿真和位流参数集中到 `config.tcl`，并用脚本复现 PDS 与 ModelSim 流程。
+## Project Overview
 
-它更适合作为：
+This template targets the MES50HP development board and supports iterative FPGA design from a blank project. Device settings, the top-level module, source-file order, pin groups, simulation, and bitstream parameters are centralized in `config.tcl`; scripts reproduce the PDS and ModelSim workflows.
 
-- Pango FPGA 新项目的起始模板
-- 人与 AI 协作开发 RTL 和 testbench 的工程骨架
-- 仿真、综合、布局布线、时序和下载流程的统一入口
-- 学习国产 FPGA 工具链自动化的参考工程
+It is intended as:
 
-本仓库中的 AI 主要指 **AI 辅助工程开发流程**，模板本身不预置神经网络模型或 AI 推理加速器。
+- A starting point for new Pango FPGA projects
+- An engineering skeleton for human and AI collaboration on RTL and testbenches
+- A unified entry point for simulation, synthesis, place-and-route, timing, and programming
+- A reference project for learning automation around domestic FPGA toolchains
 
-## 固定环境
+In this repository, **AI** refers to an AI-assisted engineering workflow. The template does not include neural-network models or AI inference accelerators.
 
-- 开发板：MES50HP
-- 器件：Logos / PGL50H / -6 / FBG484
-- PDS：2022.2-SP6.4
-- ModelSim：SE-64 10.7
+## Fixed Environment
 
-开始修改前，请先阅读 [`AGENTS.md`](AGENTS.md)。工程边界、管脚来源、生成物规则和验收标准均以该文件为准。
+- Development board: MES50HP
+- Device: Logos / PGL50H / -6 / FBG484
+- PDS: 2022.2-SP6.4
+- ModelSim: SE-64 10.7
 
-## 快速开始
+Before making changes, read [`AGENTS.md`](AGENTS.md). Project boundaries, pin-data sources, generated-artifact rules, and acceptance criteria are defined there.
+
+## Quick Start
 
 ```powershell
-# 检查配置、源文件和当前启用管脚组
+# Check configuration, sources, and the active pin group
 .\scripts\invoke-pango.cmd check
 
-# 运行 ModelSim 仿真
+# Run ModelSim simulation
 .\scripts\invoke-pango.cmd sim
 
-# 逐步执行 PDS 流程
+# Run the PDS flow step by step
 .\scripts\invoke-pango.cmd compile
 .\scripts\invoke-pango.cmd synth
 .\scripts\invoke-pango.cmd pnr
 .\scripts\invoke-pango.cmd timing
 
-# 生成位流
+# Generate a bitstream
 .\scripts\invoke-pango.cmd build
 
-# 仿真通过后执行完整流程
+# Run the complete flow after simulation passes
 .\scripts\invoke-pango.cmd all
 ```
 
-将 RTL 放入 `rtl/`，将 testbench 和仿真模型放入 `sim/`，然后在 `config.tcl` 中配置顶层模块、源文件顺序和启用管脚组。空模板使用 `TOP_MODULE` 和 `TESTBENCH_MODULE` 占位，加入实际源文件后必须同步修改配置。
+Put RTL in `rtl/` and testbenches and simulation models in `sim/`. Then configure the top-level module, source-file order, and active pin group in `config.tcl`. The blank template uses `TOP_MODULE` and `TESTBENCH_MODULE` placeholders; update the configuration when real sources are added.
 
-## 项目结构
+## Project Structure
 
 ```text
-config.tcl                 # 唯一配置入口
-AGENTS.md                  # 人与 AI 协作规则
-rtl/                       # RTL 设计源文件
-sim/                       # testbench、模型和仿真数据
-doc/mes50hp_pinout.csv     # 唯一板级管脚数据源
-doc/flash_list_usr_cd.cfl  # XT25BF128F Flash 配置
-prj/run.tcl                # 正式 PDS 流程
-prj/bootstrap/run.tcl      # PDS 器件引导流程
-scripts/                   # 检查、构建、下载和清理脚本
+config.tcl                 # Single configuration entry point
+AGENTS.md                  # Human/AI collaboration rules
+rtl/                       # RTL design sources
+sim/                       # Testbenches, models, and simulation data
+doc/mes50hp_pinout.csv     # Single source of board-level pin data
+doc/flash_list_usr_cd.cfl  # XT25BF128F Flash configuration
+prj/run.tcl                # Production PDS flow
+prj/bootstrap/run.tcl      # PDS device bootstrap flow
+scripts/                   # Check, build, programming, and cleanup scripts
 ```
 
-## AI 协作入口
+## AI Collaboration Entry Point
 
-建议每次任务按以下顺序进行：
+For each task, the recommended order is:
 
-1. 先阅读 [`AGENTS.md`](AGENTS.md) 和 `config.tcl`。
-2. 根据任务修改 `rtl/`、`sim/` 或配置文件。
-3. 先运行 `check` 或 `sim`，再执行更重的综合和布局布线流程。
-4. 根据日志中的第一个真实错误定位问题，不直接修改生成目录。
-5. 最终确认 testbench 输出 `TEST_PASS`，并且 `timing`、`build` 或 `all` 达到 `All Constraints Met`。
+1. Read [`AGENTS.md`](AGENTS.md) and `config.tcl`.
+2. Modify `rtl/`, `sim/`, or the configuration as required.
+3. Run `check` or `sim` before heavier synthesis and place-and-route steps.
+4. Find the first real error in the logs instead of editing generated directories directly.
+5. Confirm that the testbench prints `TEST_PASS` and that `timing`, `build`, or `all` reaches `All Constraints Met`.
 
-## 下载与清理
+## Programming and Cleanup
 
 ```powershell
 .\scripts\download-jtag.cmd
@@ -81,8 +83,8 @@ scripts/                   # 检查、构建、下载和清理脚本
 .\scripts\clean-generated.cmd -IncludePublished
 ```
 
-运行时生成的 `prj/work`、`prj/generated`、`sim/work` 和 `logs/` 可以清理，工具日志只应放在 `logs/` 下。不要手动编辑 `prj/generated` 中的 FDC；板级管脚必须来自 `doc/mes50hp_pinout.csv`。
+Generated `prj/work`, `prj/generated`, `sim/work`, and `logs/` content can be cleaned. Tool logs should remain under `logs/`. Do not manually edit FDC files in `prj/generated`; board-level pins must come from `doc/mes50hp_pinout.csv`.
 
-## 当前边界
+## Current Scope
 
-这是一个工程模板，不保证空模板直接实现具体业务功能。加入实际设计后，需要由使用者补充顶层 RTL、testbench、管脚组和时序约束，并完成真实开发板验证。
+This is an engineering template and does not guarantee that a blank project implements a specific application. After adding a real design, users must provide the top-level RTL, testbench, pin group, and timing constraints, then validate the design on the actual development board.

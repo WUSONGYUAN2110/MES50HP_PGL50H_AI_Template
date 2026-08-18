@@ -1,8 +1,18 @@
-# MES50HP / PGL50H 开发入口
+# MES50HP / PGL50H Development Guide / 开发入口
+
+This template targets the MES50HP board, Logos/PGL50H/-6/FBG484, PDS 2022.2-SP6.4, and ModelSim SE-64 10.7. The configured local installations are `E:\APP\PDS\PDS_2022.2-SP6.4` and `E:\APP\ModelSim`.
 
 本模板固定使用 MES50HP 开发板、Logos/PGL50H/-6/FBG484、PDS 2022.2-SP6.4 和 ModelSim SE-64 10.7。PDS 安装在 `E:\APP\PDS\PDS_2022.2-SP6.4`，ModelSim 安装在 `E:\APP\ModelSim`。
 
-## 固定边界
+## English quick reference
+
+- Use `config.tcl` as the only entry point for device, project, source order, top level, testbench, simulation time, bitstream settings, and active pin group.
+- Treat `doc/mes50hp_pinout.csv` as the only board-pin source. Never edit generated FDC files in `prj/generated`.
+- Use `check` for configuration and pin validation, `sim` for ModelSim, `build` for the complete PDS build, and `all` for simulation followed by the complete build.
+- Timing-related steps pass only when the report says `All Constraints Met`. Testbenches must print `TEST_PASS`; successful PDS steps and launchers must print `SUCCESS:` and `RESULT: status=PASS`.
+- Confirm the target board and published `.sbit` or `.bin` before programming. Normal cleanup preserves published bitstreams; `-IncludePublished` removes them as well.
+
+## Fixed boundaries / 固定边界
 
 - `config.tcl` 是器件、项目名、源文件顺序、顶层、testbench、仿真时间、位流参数和启用管脚组的唯一配置入口。
 - `doc/mes50hp_pinout.csv` 是唯一板级管脚数据源，PDS 根据它生成 FDC。
@@ -12,7 +22,7 @@
 - `prj/work`、`prj/generated`、`sim/work` 和 `logs/` 是运行时生成目录，可以删除；工具日志只允许出现在 `logs/` 下。
 - `build` 和 `all` 成功后，将本次生成的位流复制为 `prj/<project_name>.sbit` 和 `prj/<project_name>.bin`；再次构建会覆盖它们。
 
-## 开发命令
+## Development commands / 开发命令
 
 ```powershell
 .\scripts\invoke-pango.cmd check
@@ -29,7 +39,7 @@
 
 `rtl_sources` 和 `sim_sources` 非空时严格按列表顺序编译；为空时才递归发现对应目录中的源文件。新增未约束端口必须补充时序约束，只有低速、异步端口才能加入 `allowed_unconstrained_ports`。
 
-## 规则
+## Rules / 规则
 
 1. 顶层端口必须匹配 `doc/mes50hp_pinout.csv` 中已启用管脚组的 `port`。
 2. 不编辑 `prj/generated` 中的 FDC。
@@ -37,7 +47,7 @@
 4. 按键低有效、LED 高有效；HDMI RX/TX 在 R17 和 W22 存在共享连接。
 5. testbench 必须输出 `TEST_PASS`；PDS Tcl 成功时输出 `SUCCESS: PDS step`，启动脚本最终输出 `RESULT: status=PASS`。
 
-## 下载与清理
+## Programming and cleanup / 下载与清理
 
 ```powershell
 .\scripts\download-jtag.cmd
